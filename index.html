@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Karan Bagal, a Python Developer and Consultant, showcasing skills and projects."
+    />
+    <meta
+      name="keywords"
+      content="Python Developer, Full-Stack Developer, Portfolio, Projects"
+    />
+    <meta name="author" content="Karan Bagal" />
+
+    <title>Karan Bagal - Portfolio</title>
+    <!-- fontawasome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwind.com"></script>
+    <script src="./scripts/tailwind.js"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="w-full flex items-center justify-between p-4">
+        <!-- Logo Section -->
+        <div class="logo">
+          <h1 class="text-white text-xl font-bold">logo</h1>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex items-center space-x-6 text-gray-300">
+          <li class="hover:text-white cursor-pointer">
+            <a href="#about">About</a>
+          </li>
+          <li class="hover:text-white cursor-pointer">
+            <a href="#skills">Skills</a>
+          </li>
+          <li class="hover:text-white cursor-pointer">
+            <a href="#projects">Projects</a>
+          </li>
+          <li class="hover:text-white cursor-pointer">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="hidden md:flex items-center search">
+          <input
+            type="text"
+            placeholder="Search"
+            class="w-[12vw] rounded p-2.5 py-1 text-base shadow-[0_2px_4px_rgba(0,0,0,0.1)] transition"
+          />
+          <i
+            class="fa-solid .right-10 fa-magnifying-glass text-gray-400 relative"
+          ></i>
+        </div>
+
+        <!-- Hamburger Menu Icon -->
+        <div
+          id="menu-icon"
+          class="block md:hidden text-white text-2xl cursor-pointer"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <ul
+        id="mobile-menu"
+        class="hidden z-10 absolute top-16 right-0 w-full h-full text-gray-300 space-y-4 p-6 md:hidden"
+      >
+        <li class="hover:text-white cursor-pointer text-center">
+          <a href="#about">About</a>
+        </li>
+        <li class="hover:text-white cursor-pointer text-center">
+          <a href="#skills">Skills</a>
+        </li>
+        <li class="hover:text-white cursor-pointer text-center">
+          <a href="#projects">Projects</a>
+        </li>
+        <li class="hover:text-white cursor-pointer text=center">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section
+        class="hero p-7 flex items-center justify-between w-full h-screen md:gap-7 bg-bgColor text-textColor px-5 md:px-20 md:text-center box-border relative shadow-md"
+      >
+        <div
+          class="short-desc md:ml-16 flex-1 px-5 md:px-10 md:p-0 flex flex-col items-start"
+        >
+          <h2
+            class="text-2xl md:text-4xl font-normal mb-5 text-start text-white"
+          >
+            I'M
+            <span class="name text-gold text-4xl md:text-6xl">Karan Bagal</span
+            ><br />
+            MERN Stack Developer &<br />
+            Full-Stack Specialist
+          </h2>
+          <button
+            class="contact-btn bg-transparent border-2 px-4 py-2 text-lg cursor-pointer rounded-md transition-colors duration-300 hover:bg-hoverBgColor hover:text-hoverTextColor"
+          >
+            <a href="#contact">Contact Us</a>
+          </button>
+        </div>
+        <div class="img flex-1 flex justify-center items-center">
+          <img
+            src="./sd.png"
+            alt="Karan Bagal"
+            class="w-[408px] h-[420px] md:w-[500px] md:h-[500px] rounded-full"
+          />
+        </div>
+        <span
+          class="social absolute bottom-10 right-20 flex flex-col gap-8 items-center text-white"
+        >
+          <span class="line w-1 h-16" style="background: var(--gold)"></span>
+          <a href="https://www.facebook.com/karan.bagal.106" target="_blank"
+            ><i class="fa-brands fa-facebook fa-fw fa-lg"></i
+          ></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-x-twitter fa-fw fa-lg"></i
+          ></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin fa-fw fa-lg"></i
+          ></a>
+          <a href="http://" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-whatsapp fa-fw fa-lg"></i
+          ></a>
+        </span>
+      </section>
+
+      <section class="About h-auto min-h-56 shadow-lg">
+        <header
+          class="w-auto mb-5 pt-12"
+          style="background-color: var(--second-bg-color)"
+        >
+          <h1 class="text-white text-3xl font-medium">About</h1>
+        </header>
+        <main id="about" class="flex flex-col md:flex-row gap-2 items-start">
+          <div class="w-16 md:block hidden bg-yellow-400 aboutLine"></div>
+          <p class="text text-balance text-lg text-gray-500 leading-relaxed">
+            My name is
+            <span class="highlight font-bold text-yellow-400">Karan</span>. I
+            live in Theur, Pune. At the moment, I'm in the second year of
+            <span class="highlight font-bold text-yellow-400">BCS</span>
+            at Annasaheb Magar College in Hadapsar. Although I have an
+            understanding of web development, my ultimate goal is to become a
+            <span class="highlight font-bold text-yellow-400"
+              >full stack web developer</span
+            >. Besides my pursuits, I have a passion for acquiring new knowledge
+            and fully immersing myself in the world of technology.
+          </p>
+        </main>
+      </section>
+
+      <section class="skill h-auto text-white py-12">
+        <header>
+          <h1 class="text-4xl md:text-5xl font-bold text-center">My Skills</h1>
+        </header>
+        <main id="skills" class="py-8 px-32 md:px-24 lg:px-48">
+          <div class="skill-container flex flex-col items-center">
+            <!-- Skill rows will be injected here -->
+          </div>
+        </main>
+      </section>
+
+      <section class="project h-auto py-10">
+        <header class="text-white text-center py-5">
+          <h1 class="text-4xl md:text-5xl font-bold tracking-wide">Projects</h1>
+        </header>
+        <main id="projects" class="flex flex-col items-center">
+          <div
+            class="grid gap-6 p-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+            id="project-container"
+          >
+            <!-- Projects will be rendered here -->
+          </div>
+          <button
+            id="view-more-button"
+            class="mt-6 px-6 py-2 bg-yellow-500 text-gray-800 font-semibold rounded hover:bg-yellow-600 transition-all"
+          >
+            View More
+          </button>
+        </main>
+      </section>
+
+      <section class="testimonials h-auto py-16">
+        <header>
+          <h1 class="text-4xl font-bold text-center mb-8">What People Say</h1>
+        </header>
+        <main>
+          <div
+            class="testimonial-container flex flex-col md:flex-row md:flex-wrap justify-center gap-6"
+          >
+            <!-- The testimonial cards will be injected here by JavaScript -->
+          </div>
+        </main>
+      </section>
+    </main>
+    <footer class="main-footer h-auto md:h-[42vh]">
+      <header
+        class="flex flex-col md:flex-row justify-between md:items-end items-center"
+      >
+        <span class="w-full h-[3px] bg-yellow-400"></span>
+        <h1
+          class="text-3xl md:text-4xl font-bold text-center text-nowrap text-white p-5 md:relative top-9 pt-0"
+        >
+          Contact Me
+        </h1>
+        <span class="w-full h-[3px] bg-yellow-400"></span>
+      </header>
+
+      <main id="contact" class="grid py-12 place-items-center h-[75%]">
+        <div
+          class="flex flex-col md:flex-wrap md:flex-row justify-center items-center gap-4 w-full max-w-[666px]"
+        >
+          <div
+            class="box flex items-center justify-between bg-gray-800 text-yellow-400 p-4 rounded-lg w-64 sm:w-72"
+          >
+            <i class="fa-regular fa-envelope text-white"></i>
+            <span>|</span>
+            <p class="ml-2 text-sm sm:text-base">karanbagal021@gmail.com</p>
+          </div>
+          <div
+            class="box flex items-center justify-between bg-gray-800 text-yellow-400 p-4 rounded-lg w-64 sm:w-72"
+          >
+            <i class="fa-solid fa-phone text-white"></i>
+            <span>|</span>
+            <p class="ml-2 text-sm sm:text-base">+91 97674 73321</p>
+          </div>
+          <div
+            class="box flex items-center justify-between bg-gray-800 text-yellow-400 p-4 rounded-lg w-64 sm:w-72"
+          >
+            <i class="fa-solid fa-location-dot text-white"></i>
+            <span>|</span>
+            <p class="ml-2 text-sm sm:text-base">Pune, Maharashtra</p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="relative -top-5">
+        <header class="flex justify-center items-center">
+          <span class="liness h-[3px] w-full"></span>
+          <div class="flex space-x-3 md:space-x-5 p-5">
+            <i class="fa-brands fa-facebook fa-lg text-white"></i>
+            <i class="fa-brands fa-x-twitter fa-lg text-white"></i>
+            <i class="fa-brands fa-linkedin fa-lg text-white"></i>
+            <i class="fa-brands fa-whatsapp fa-lg text-white"></i>
+          </div>
+          <span class="liness h-[3px] w-full"></span>
+        </header>
+      </footer>
+    </footer>
+
+    <footer
+      class="last-Footer grid place-items-center h-auto md:h-[42vh] text-white"
+    >
+      <h1 class="text-center text-lg md:text-2xl font-semibold">
+        "Thanks for Scrolling"
+      </h1>
+    </footer>
+  </body>
+</html>
+<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
+<script src="./scripts/script.js"></script>

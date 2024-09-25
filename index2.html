@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Portfolio of Karan Bagal, a Python Developer and Consultant, showcasing skills and projects."
+    />
+    <meta
+      name="keywords"
+      content="Python Developer, Full-Stack Developer, Portfolio, Projects"
+    />
+    <meta name="author" content="Karan Bagal" />
+
+    <title>Karan Bagal - Portfolio</title>
+
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-900 text-white font-sans">
+    <header class="w-full bg-gray-800">
+      <nav class="flex justify-between items-center p-4">
+        <div class="text-2xl text-white font-bold">
+          <h1>logo</h1>
+        </div>
+        <ul class="flex space-x-6">
+          <li class="text-gray-300 hover:text-white cursor-pointer">About</li>
+          <li class="text-gray-300 hover:text-white cursor-pointer">Portfolio</li>
+          <li class="text-gray-300 hover:text-white cursor-pointer">Contacts</li>
+        </ul>
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="search"
+            class="bg-gray-700 text-gray-300 py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <i class="fas fa-search absolute top-3 right-4 text-gray-400"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="min-h-screen">
+      <section class="hero flex flex-col md:flex-row items-center justify-between p-6 md:p-10 bg-gray-900">
+        <div class="short-desc md:w-1/2 space-y-4">
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+            I'M <span class="text-yellow-500">Ivan Dan</span><br />
+            Python Developer & Expert<br />
+            Consultant
+          </h2>
+          <button
+            class="border-2 border-yellow-500 text-yellow-500 py-2 px-4 rounded-md hover:bg-yellow-500 hover:text-gray-900 transition duration-300"
+          >
+            Contact Us
+          </button>
+        </div>
+        <div class="img md:w-1/2">
+          <img src="./profile.png" alt="Ivan Dan" class="max-w-full h-auto rounded-full" />
+        </div>
+        <div class="social flex flex-col items-center absolute bottom-10 right-10 space-y-8 text-white">
+          <span class="w-px h-16 bg-yellow-500"></span>
+          <i class="fab fa-facebook fa-lg"></i>
+          <i class="fab fa-twitter fa-lg"></i>
+          <i class="fab fa-linkedin fa-lg"></i>
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </div>
+      </section>
+
+      <section class="About bg-gray-800 py-10 px-6">
+        <header>
+          <h1 class="text-4xl text-white font-bold mb-4">About</h1>
+        </header>
+        <div class="aboutLine h-1 w-16 bg-yellow-500 mb-4"></div>
+        <p class="text-lg leading-relaxed text-gray-300">
+          My name is <span class="text-yellow-500 font-semibold">Karan</span>.
+          I live in Theur, Pune. At the moment, I'm in the second year of
+          <span class="text-yellow-500 font-semibold">BCS</span> at Annasaheb Magar College in Hadapsar. Although I have an understanding of web development,
+          my ultimate goal is to become a <span class="text-yellow-500 font-semibold">full stack web developer</span>.
+          Besides my pursuits, I have a passion for acquiring new knowledge and fully immersing myself in the world of technology.
+        </p>
+      </section>
+
+      <section class="skill py-10">
+        <header class="text-center mb-8">
+          <h1 class="text-4xl text-white font-bold">My Skills</h1>
+        </header>
+        <main class="flex flex-col items-center space-y-4">
+          <div class="skill-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skill cards go here -->
+          </div>
+        </main>
+      </section>
+
+      <section class="project py-10">
+        <header class="text-center">
+          <h1 class="text-4xl font-bold text-white">Portfolio</h1>
+        </header>
+        <main class="grid place-items-center mt-6">
+          <div class="project-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamic project cards -->
+          </div>
+          <button id="view-more-button" class="mt-6 py-2 px-4 bg-yellow-500 text-gray-900 rounded-lg font-bold">
+            View More
+          </button>
+        </main>
+      </section>
+
+      <section class="testimonials bg-gray-800 py-10">
+        <header class="text-center mb-6">
+          <h1 class="text-4xl text-white font-bold">What People Say</h1>
+        </header>
+        <div class="testimonial-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial items go here -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 py-8 text-center">
+      <div class="contacts grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div class="flex items-center justify-center space-x-2">
+          <i class="far fa-envelope"></i>
+          <p>karanbagal021@gmail.com</p>
+        </div>
+        <div class="flex items-center justify-center space-x-2">
+          <i class="fas fa-phone"></i>
+          <p>+91 97674 73321</p>
+        </div>
+        <div class="flex items-center justify-center space-x-2">
+          <i class="fas fa-location-dot"></i>
+          <p>Pune, Maharashtra</p>
+        </div>
+      </div>
+      <div class="flex justify-center space-x-6">
+        <i class="fab fa-facebook fa-lg"></i>
+        <i class="fab fa-twitter fa-lg"></i>
+        <i class="fab fa-linkedin fa-lg"></i>
+        <i class="fab fa-whatsapp fa-lg"></i>
+      </div>
+    </footer>
+
+    <footer class="bg-gray-800 py-6 text-center">
+      <h1 class="text-white text-xl">"Thanks for Scrolling"</h1>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* Define CSS variables */
+:root {
+  --gold-card: #f0bf6c;
+  --gold: #ffc86b;
+  --bg-color: #34353a;
+  --section-bg: #14192f;
+  --text-color: #969799;
+  --hover-text-color: #f1f1f1;
+  --hover-bg-color: #e0e0e0;
+  --border-color: #ccc;
+  --input-bg-color: #4e5056;
+  --search-icon-color: #00ffcc;
+  --second-bg-color: #31333b;
+  --footer-bg: #3d3e42;
+  --footer-Contact-Bg: #31333b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 544;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+section {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--second-bg-color);
+}
+
+ul {
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  background-color: var(--bg-color);
+}
+.search input[type="text"] {
+  border: none;
+  color: var(--search-icon-color);
+  background-color: var(--input-bg-color);
+  outline: none;
+}
+
+.search input[type="text"]::placeholder {
+  color: var(--search-icon-color);
+}
+.search input[type="text"]:focus {
+  border-color: #999;
+}
+li {
+  margin: 0 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  color: var(--hover-bg-color);
+}
+.hero .name {
+  color: var(--gold);
+  font-size: 3rem;
+}
+
+.hero .contact-btn {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.About {
+  padding-left: 5rem;
+}
+
+/* For mobile devices, adjust the padding */
+
+
+.highlight {
+  background-color: transparent;
+  color: var(--gold);
+}
+p.text {
+  color: var(--hover-text-color);
+}
+
+.aboutLine {
+  width: 4.2vw;
+  height: 2px;
+  position: relative;
+  top: 16px;
+  background-color: var(--gold);
+}
+
+.card:hover {
+  background: var(--gold-card);
+}
+
+.project-button {
+  background-color: var(--gold-card);
+
+  color: var(--second-bg-color);
+}
+
+.project-button:hover {
+  color: var(--section-bg);
+  background-color: var(--gold);
+}
+#view-more-button {
+  background: var(--gold);
+  color: var(--second-bg-color);
+}
+
+.testimonials {
+  background-color: var(--second-bg-color);
+
+  color: var(--text-color);
+}
+
+.testimonials header {
+  margin-bottom: 20px;
+}
+
+.testimonials header h1 {
+  color: var(--gold);
+}
+footer.contact {
+  background: var(--footer-bg);
+}
+footer.conatct header {
+  background-color: var(--bg-color);
+}
+footer.contact header span {
+  background: var(--gold-card);
+}
+footer.contact header h1 {
+  color: var(--search-icon-color);
+}
+
+.main-footer {
+  background-color: var(--second-bg-color);
+}
+.last-Footer {
+  background-color: var(--bg-color);
+}
+footer main.grid {
+  background-color: var(--footer-bg);
+}
+
+footer header span.liness {
+  background: var(--gold-card);
+}
+.cards {
+  opacity: 0; /* Hide initially */
+  transform: translateY(20px); /* Initial position */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .short-desc {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero .img {
+    margin-top: 20px;
+  }
+  .About {
+    padding-left: 2rem;
+  }
+ 
+}
+
+.img {
+  background-color:#384358;
+  border-radius: 66% 34% 57% 43% / 100% 0% 100% 0% ;
+
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:wght@400;600&family=Fira+Sans:wght@400;700&family=Merriweather:wght@400;700&display=swap");
+/* Define the fonts for different sections */
+body {
+  font-family: "Fira Sans", sans-serif; /* Body text */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif; /* Headings */
+  font-weight: 700;
+}
+
+nav a {
+  font-family: "Montserrat", sans-serif; /* Navigation links */
+}
+
+button,
+.cta-button {
+  font-family: "Montserrat", sans-serif; /* Buttons */
+}
+
+blockquote,
+.quote-section {
+  font-family: "Lora", serif; /* Quotes and testimonials */
+  font-style: italic;
+}
+
+.subheading {
+  font-family: "Lora", serif; /* Subheadings */
+  font-weight: 600;
+}
+
+.special-section,
+.about-section {
+  font-family: "Merriweather", serif; /* Highlighted sections like 'About Me' */
+}
