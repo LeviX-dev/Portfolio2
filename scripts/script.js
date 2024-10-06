@@ -66,13 +66,13 @@ let moreProjects = [
 
 const projects = [
   { 
-    imgSrc: "../projects/urlShortner.png",
+    imgSrc: "./projects/urlShortner.png",
     title: "Url Shortner",
     description: "Developed a MERN-based URL shortener with authentication and click tracking.",
     live:"https://short-opal.vercel.app/"
   },
   { 
-    imgSrc: "../projects/Blog.png",
+    imgSrc: "./projects/Blog.png",
     title: "Blog website",
     description: "A custom-designed blog using Blogger with enhanced HTML, CSS, and JavaScript for unique functionality.",
     live:"https://doflamingosaga.blogspot.com/"
