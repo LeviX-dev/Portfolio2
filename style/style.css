@@ -189,12 +189,12 @@ footer header span.liness {
   }
  
 }
-
+  /*
 .img {
-  /*background-color:#384358;*/
+background-color:#384358;
   border-radius: 66% 34% 57% 43% / 100% 0% 100% 0% ;
 
-}
+}*/
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lora:wght@400;600&family=Fira+Sans:wght@400;700&family=Merriweather:wght@400;700&display=swap");
 /* Define the fonts for different sections */
