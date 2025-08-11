@@ -14,7 +14,7 @@
     <meta name="author" content="Karan Bagal" />
 
     <title>Karan Bagal - Portfolio</title>
-    <!-- fontawasome icon -->
+    <!-- fontawesome icon -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -26,8 +26,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwind.com"></script>
-    <script src="./scripts/tailwind.js"></script>
+    <!-- Tailwind CDN only -->
+    <script src="./scripts/tailwind.js" defer></script>
     <link rel="stylesheet" href="./style/style.css" />
   </head>
 
@@ -36,7 +36,11 @@
       <nav class="w-full flex items-center justify-between p-4">
         <!-- Logo Section -->
         <div class="logo">
-          <h1 class="text-white text-xl font-bold">logo</h1>
+          <img
+            src="https://avatars.githubusercontent.com/u/119744148?v=4"
+            alt="Karan Bagal"
+            class="logo-img"
+          />
         </div>
 
         <!-- Navigation Links -->
@@ -55,21 +59,27 @@
           </li>
         </ul>
 
-        <!-- Search Bar -->
+        <!-- Search Bar with label for accessibility -->
         <div class="hidden md:flex items-center search">
+          <label for="search-input" class="sr-only">Search</label>
           <input
+            id="search-input"
             type="text"
             placeholder="Search"
             class="w-[12vw] rounded p-2.5 py-1 text-base shadow-[0_2px_4px_rgba(0,0,0,0.1)] transition"
           />
           <i
-            class="fa-solid .right-10 fa-magnifying-glass text-gray-400 relative"
+            class="fa-solid right-10 fa-magnifying-glass text-gray-400 relative"
+            aria-hidden="true"
           ></i>
         </div>
 
         <!-- Hamburger Menu Icon -->
         <div
           id="menu-icon"
+          role="button"
+          tabindex="0"
+          aria-label="Toggle menu"
           class="block md:hidden text-white text-2xl cursor-pointer"
         >
           <i class="fa-solid fa-bars"></i>
@@ -90,7 +100,7 @@
         <li class="hover:text-white cursor-pointer text-center">
           <a href="#projects">Projects</a>
         </li>
-        <li class="hover:text-white cursor-pointer text=center">
+        <li class="hover:text-white cursor-pointer text-center">
           <a href="#contact">Contact</a>
         </li>
       </ul>
@@ -98,50 +108,77 @@
 
     <main>
       <section
-        class="hero p-7 flex items-center justify-between w-full h-screen md:gap-7 bg-bgColor text-textColor px-5 md:px-20 md:text-center box-border relative shadow-md"
+        class="hero p-7 flex flex-col md:flex-row items-center justify-between w-full h-[70vh] md:gap-7 bg-bgColor text-textColor px-5 md:px-20 box-border relative shadow-md"
+        aria-label="Introduction and contact"
       >
         <div
-          class="short-desc md:ml-16 flex-1 px-5 md:px-10 md:p-0 flex flex-col items-start"
+          class="short-desc flex-1 px-5 md:px-10 md:p-0 flex flex-col items-start md:items-start text-left md:text-left"
         >
-          <h2
-            class="text-2xl md:text-4xl font-normal mb-5 text-start text-white"
-          >
+          <h2 class="text-2xl md:text-4xl font-normal mb-5 text-white">
             I'M
-            <span class="name text-gold text-4xl md:text-6xl">Karan Bagal</span
+            <span class="name text-gold text-4xl md:text-6xl font-bold"
+              >Karan Bagal</span
             ><br />
             MERN Stack Developer &<br />
             Full-Stack Specialist
           </h2>
-          <button
-            class="contact-btn bg-transparent border-2 px-4 py-2 text-lg cursor-pointer rounded-md transition-colors duration-300 hover:bg-hoverBgColor hover:text-hoverTextColor"
+          <a
+            href="#contact"
+            class="contact-btn inline-block border-2 px-5 py-2 text-lg rounded-md transition-colors duration-300 hover:bg-hoverBgColor hover:text-hoverTextColor focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2"
+            aria-label="Contact Karan Bagal"
+            >Contact Us</a
           >
-            <a href="#contact">Contact Us</a>
-          </button>
         </div>
-        <div class="img flex-1 flex justify-center items-center">
+
+        <div class="img flex-1 flex justify-center items-center mt-8 md:mt-0">
           <img
             src="https://avatars.githubusercontent.com/u/97740708?v=4"
-            alt="Karan Bagal"
-            class="w-[408px] h-[420px] md:w-[500px] md:h-[500px] "
+            alt="Portrait of Karan Bagal"
+            loading="lazy"
+            width="500"
+            height="500"
+            class="rounded-lg shadow-lg max-w-full h-auto"
           />
         </div>
-        <span
-          class="social absolute bottom-10 right-20 flex flex-col gap-8 items-center text-white"
+
+        <nav
+          class="social absolute bottom-10 right-6 flex flex-col gap-8 items-center text-white"
+          aria-label="Social media links"
         >
           <span class="line w-1 h-16" style="background: var(--gold)"></span>
-          <a href="https://www.facebook.com/karan.bagal.106" target="_blank"
-            ><i class="fa-brands fa-facebook fa-fw fa-lg"></i
-          ></a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-x-twitter fa-fw fa-lg"></i
-          ></a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin fa-fw fa-lg"></i
-          ></a>
-          <a href="http://" target="_blank" rel="noopener noreferrer"
-            ><i class="fa-brands fa-whatsapp fa-fw fa-lg"></i
-          ></a>
-        </span>
+          <a
+            href="https://www.facebook.com/karan.bagal.106"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook fa-fw fa-lg"></i>
+          </a>
+          <a
+            href="https://x.com/karanbagal01234"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+          >
+            <i class="fa-brands fa-x-twitter fa-fw fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/karanbagal01234/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin fa-fw fa-lg"></i>
+          </a>
+          <a
+            href="https://wa.link/uihk9p"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp fa-fw fa-lg"></i>
+          </a>
+        </nav>
       </section>
 
       <section class="About h-auto min-h-56 shadow-lg">
@@ -218,7 +255,7 @@
       >
         <span class="w-full h-[3px] bg-yellow-400"></span>
         <h1
-          class="text-3xl md:text-4xl font-bold text-center text-nowrap text-white p-5 md:relative top-9 pt-0"
+          class="text-3xl md:text-4xl font-bold text-center whitespace-nowrap text-white p-5 md:relative top-9 pt-0"
         >
           Contact Me
         </h1>
@@ -229,55 +266,78 @@
         <div
           class="flex flex-col md:flex-wrap md:flex-row justify-center items-center gap-4 w-full max-w-[666px]"
         >
-          <div
+          <a
+            href="mailto:karanbagal021@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             class="box flex items-center justify-between bg-gray-800 text-yellow-400 p-4 rounded-lg w-64 sm:w-72"
           >
             <i class="fa-regular fa-envelope text-white"></i>
             <span>|</span>
             <p class="ml-2 text-sm sm:text-base">karanbagal021@gmail.com</p>
-          </div>
-          <div
+          </a>
+          <a
+            href="tel:+919767473321"
+            target="_blank"
+            rel="noopener noreferrer"
             class="box flex items-center justify-between bg-gray-800 text-yellow-400 p-4 rounded-lg w-64 sm:w-72"
           >
             <i class="fa-solid fa-phone text-white"></i>
             <span>|</span>
             <p class="ml-2 text-sm sm:text-base">+91 97674 73321</p>
-          </div>
-          <div
+          </a>
+          <a
+            href="https://maps.app.goo.gl/Tc37MDDDJKauyxgw9"
+            target="_blank"
+            rel="noopener noreferrer"
             class="box flex items-center justify-between bg-gray-800 text-yellow-400 p-4 rounded-lg w-64 sm:w-72"
           >
             <i class="fa-solid fa-location-dot text-white"></i>
             <span>|</span>
             <p class="ml-2 text-sm sm:text-base">Pune, Maharashtra</p>
-          </div>
+          </a>
         </div>
+        <button
+          id="scroll-to-top"
+          class="mt-6 px-6 py-2 bg-yellow-500 text-gray-800 font-semibold rounded hover:bg-yellow-600 transition-all"
+        >
+    <i class="fa-solid fa-chevron-up"></i>
+        </button>
       </main>
 
       <footer class="relative -top-5">
         <header class="flex justify-center items-center">
           <span class="liness h-[3px] w-full"></span>
           <div class="flex space-x-3 md:space-x-5 p-5">
-            <i class="fa-brands fa-facebook fa-lg text-white"></i>
-            <i class="fa-brands fa-x-twitter fa-lg text-white"></i>
-            <i class="fa-brands fa-linkedin fa-lg text-white"></i>
-            <i class="fa-brands fa-whatsapp fa-lg text-white"></i>
+            <a href="https://www.facebook.com/karan.bagal.106" target="_blank"
+              ><i class="fa-brands fa-facebook fa-fw fa-lg"></i
+            ></a>
+            <a
+              href="https://x.com/karanbagal01234"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-x-twitter fa-fw fa-lg"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/karanbagal01234/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin fa-fw fa-lg"></i>
+            </a>
+            <a
+              href="https://wa.link/uihk9p"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-whatsapp fa-fw fa-lg"></i
+            ></a>
           </div>
           <span class="liness h-[3px] w-full"></span>
         </header>
       </footer>
     </footer>
 
-    <footer
-      class="last-Footer grid place-items-center h-auto md:h-[42vh] text-white"
-    >
-      <h1 class="text-center text-lg md:text-2xl font-semibold">
-        "Thanks for Scrolling"
-      </h1>
-    </footer>
+    <script src="./scripts/script.js" defer></script>
   </body>
 </html>
-<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
-<script src="./scripts/script.js"></script>
